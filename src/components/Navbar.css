@@ -1,0 +1,81 @@
+/* Navbar.css */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Add space between logo and menu items */
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 60px;
+    padding: 0 20px; /* Add some padding to the navbar for spacing */
+}
+
+  .logo {
+    display: flex; /* Display the logo as a flex item */
+    align-items: center; /* Vertically align the logo within the navbar */
+}
+
+  .logo img {
+    width: 380px; /* Adjust the maximum width as needed */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+  .menuitems {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 200x;
+  }
+  
+  .menuitems li {
+    margin-right: 20px;
+  }
+  
+  .menuitems li:last-child {
+    margin-right: 0;
+  }
+  
+  .menuitems a {
+    text-decoration: none;
+    color: #949222;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menuitems a:hover {
+    color: #ffd700; /* Change the color on hover */
+  }
+  
+  .fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Media query for responsive design (toggle navigation on small screens) */
+  @media (max-width: 768px) {
+    .menuitems {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .menuitems.active {
+      display: flex;
+    }
+  
+    .menuitems li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .fa-bars {
+      display: block;
+    }
+  }
+  
